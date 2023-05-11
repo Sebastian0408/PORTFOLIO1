@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Simulator - Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">My Portfolio</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Portfolio</a></li>
+							<li class="active"><a href="Simulator.html">Space Flight Simulator</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/sebastian-rodriguez-02b03a218/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/Sebastian0408" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date"></span>
+									<h1>Space Flight<br />
+									Simulator</h1>
+									<p>Programmed custom Python Space Flight Simulator. Powerful N-body physics engines using precise differential update systems and high levels of detail. Orbital mechanics physics engine with robust and powerful n-body updates and trajectory projection. Atmospheric takeoff/landing engine including low-orbit approximations and complex drag force analysis. </p>
+								</header>
+								<div class="image main"><img src="images/FullVideoShort.gif" alt="" /></div>
+								<div class="image left"><img src="images/Classes.gif" alt="" /></div>
+								<p>I began by approaching his projet from an object-oriented programming approach. I developed a custom "Vector" class for the mathematics of the physics engine, and a "CelestialObjects" class with a "Rocket" subclass. Using these classes, I would be able to build up this program in an organized, methodical, and realistic way, especially from the Aerospace Engineering perspective of this project. For example, in addition to a "mass" attribute, the "rocket" instances could be assigned specific physical and engineering attributes, including coefficient of drag, propellant mass, max thrust, and so on.</p>
+								<div class="image left"><img src="images/Engine.gif" alt="" /></div>								
+								<p>Next, I developed the orbital physics engine. I approached the physics engine as an n-body problem, with a series of looping vector differential equations computing precise net forces (gravity, and thrust for the rocket) between all objects and subsequently updating momentums and positions. The differential step "dt" could be adjusted to toggle the speed and accuracy of the simulation.</p>	
+								<p>Once the orbital physics engine was working well, I developed an atmospheric takeoff/landing physics engine. This physics engine used the same looping vector differential equations approach as the first one, however, it used a low-orbit approximation and incoroporated a complex and detailed drag-force calculation, using relevant attributes of the rocket (coefficient of drag, speed, angle, etc.) and the density of the atmosphere at the current altitude.</p>
+								<div class="image left"><img src="images/Drawings.gif" alt="" /></div>
+								<p>Once the physics engines were working properly, and all of the constants and parameters were tuned, I moved on to fine-tuning the graphics and user experience.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </p>
+								<p>I built the game to have three different selectable "scenarios": Takeoff, Orbit, and Landing. The takeoff and landing scenarios both use the atmospheric physics engine, while the orbit scenario uses the orbital physics engine.</p>
+								<div class="image left"><img src="images/TakeoffVideo.gif" alt="" /></div>								
+								<p>In the takeoff and landing scenarios, the rocket has the form and parameters of a launch rocket and lander module respectively. Important metrics such as altitude, fuel, and velocity are displayed, and the user can toggle thrust level and rotate the vehicle. As the user toggles thrust, the animation updates the engine animation accordingly. As the atmophere changes density, the color gradient changes accordingly. Each situation has its own realistic "success" and "failure" parameters. If the launch vehicle achieves the proper altitude with an angle within the proper range (required angle for a stable low-eccentricity orbit), the simualator automatically progresses to the next scenario--orbit. </p>
+								<div class="image left"><img src="images/LandingVideo.gif" alt="" /></div>		
+								<p>Analogously, if the vehicle hits the ground with a low enough velocity and a proper angle (such that, in a realistic situation, the vehicle would not be damaged), the simulation ends with a sucess message, and the user has the option of restarting or returning to the home screen. Otherwise, a failure screen appears explaining the user's mistake, and there is once again an option to return to the home screen. These two scenarios are very similar, as they use the same physics engine and are, in a way, analogous opposites of one-another. Thus, I was able to greatly stremline and optimize the efficiency, organization, and scaleablility of the program by developing a "base" for both launching and landing, and then building the subtle changes onto this base for each specific scenario.</p>
+								<div class="image left"><img src="images/OrbitVideo.gif" alt="" /></div>								
+								<p>In the orbit scenario, there are four possible views. The "map" view allows the user to see the relative positions of the celestial objects and the rocket, with conveninent labels and a beacon for the rocket. In this view, the user can speed up and slow down the simulation speed (within a predetermined range in which accuracy does not suffer significantly). Additionally, a powerful projection tool allows the user to pause the simulation and see the trajectories of all of the objects. The projection lines have a color-gradient to visualize time, and thus, allow the user to set up succesful transfer orbits and coincidence times by matching trajectory lines and colors. This tool repurposes the programs orbital physics engine withing a loop to statically project accurate position of objects using n-body calculation precison. After the map view, there are three other zoom-in options. A user can zoom in once to see the rocket as a realistically small point relative to the sizes of the celestial objcts. Then, the user can zoom in twice or thrice to see the actual close-up shape of the vehicle, with a detailed engine flame that updates as the user toggles thrust.</p>							
+							</section>
+					</div>
+
+								<!-- Footer -->
+								<footer id="footer">
+									<section>
+										
+									</section>
+										<section>
+											<h3>Phone</h3>
+											<p><a href="#">(513) 806-5916</a></p>
+										</section>
+										<section>
+											<h3>Email</h3>
+											<p><a href="#">srodrig2@andrew.cmu.edu</a></p>
+											<p><a href="#">ser08040421@gmail.com</a></p>
+										</section>
+										<section>
+											<h3>Social</h3>
+											<ul class="icons alt">
+												<li><a href="https://www.linkedin.com/in/sebastian-rodriguez-02b03a218/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+												<li><a href="https://github.com/Sebastian0408" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+											</ul>
+										</section>
+									</section>
+								</footer>
+			
+							<!-- Copyright -->
+								<div id="copyright">
+									<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+								</div>
+			
+						</div>
+			
+					<!-- Scripts -->
+						<script src="assets/js/jquery.min.js"></script>
+						<script src="assets/js/jquery.scrollex.min.js"></script>
+						<script src="assets/js/jquery.scrolly.min.js"></script>
+						<script src="assets/js/browser.min.js"></script>
+						<script src="assets/js/breakpoints.min.js"></script>
+						<script src="assets/js/util.js"></script>
+						<script src="assets/js/main.js"></script>
+			
+	</body>
+</html>
