@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Ornithopter - Portfolio</title>
+		<title>PipeCrawler - Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -26,7 +26,7 @@
 					<nav id="nav">
 						<ul class="links">
 							<li><a href="index.html">Portfolio</a></li>
-							<li class="active"><a href="Ornithopter.html">Ornithopter</a></li>
+							<li class="active"><a href="Ornithopter.html">PipeCrawler</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/sebastian-rodriguez-02b03a218/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -41,25 +41,17 @@
 							<section class="post">
 								<header class="major">
 									<span class="date"></span>
-									<h1>Ornithopter<br /></h1>
-									<p> Developed original design and built prototypes for a remote-control mechanical bird drone </p>
+									<h1>PipeCrawler<br /></h1>
+									<p> Designed new iteration and built prototype for cutting-edge pipe-inspection robot </p>
 								</header>
 								<div class="image main"><img src="images/OrnithopterTopFull (1).jpg" alt="" /></div>
 								<div class="image main"><img src="images/OrnithopterUnderBodyCropped.jpg" alt="" /></div>
-								<p>I started this project with research: I began by studying bird flight biomechanics and aerodynamics. First, I focused on the complex motion of flapping wings and the aerodynamics and biomechanics that allow for the extreme efficiency of bird flight. I read research papers on the subject, and studied slow motion videos of flapping wings, making sure to measure exact angles, frequencies, velocities, and positions. Then, I studied the body shape, mass distribution, size, weight, and flight angles/positions of birds.  </p> 
+								<p>I began by designing the roll-coupling mechanism. I first designed a sturdy actuator connection for the Dynamixel PH54-200-S500-R. Then I designed a variable angle joint for adjustability and a more robust design--the locking adjustable angle would allow for implementation in different pipe diameters. It was imperative that the roll-coupling remain in the middle axis of the pipe.</p> 
 								<div class="image main"><img src="images/BirdResearch.gif" alt="" /></div>
-								<p>Once I had completed my biological research, I focused on the technical research. I studied principles of mechanical design, advanced CAD design and simulation, small-scale aeronautical design, rapid protoyping and manufacturing techniques, lightweight materials, mechatronics/avionics circuits & control-system programming, RF-control system electronics, and so on.</p>
+								<p>Next, I redesigned the omniwheel modules to make them more compact and shorter. This important for the robot to be able to navigate sharper turns. I redesigned the components with compact wire channels and a sturdy organic connection.</p>
+								<p>While designing the modules and planning the carbon-fiber tube connection lengths between the robot's modues, I wrote functions for the angle and connection length variables, and used a Python mathematical simulation tool (developed specifically for this project) to model the geometry of the robot's navigation through various pipe turns.</p>
 								<div class="image main"><img src="images/OrnithopterDrafts.png" alt="" /></div>
-								<p>Once I was done with research, I brainstormed ideas and hand-drafted rough designs and parameters. I based the rough parameters, dimensions, size, weight, flapping-frequency and angles on a Red-Tailed Hawk. I focused especially on the design of a mechanism that would mechanically emulate the folding movement of bird wings, and extremely lightweight yet strong self-locking (through material tension) body and wing structures.</p>
-								<div class="image main"><img src="images/CAD_1.gif" alt="" /></div>
-								<p>Next, I moved on to CAD design the machine using Autodesk Fusion 360. I began by making mechanical models of different flapping mechanisms--testing them, improving them, and troubleshooting them. Designign the flapping mechanism was incredibly complex and difficult, but after countless failed ideas, I developed an effective and efficient flapping mechanism that uses a system of levers connected to the drive gear to accomplish the desired movement.  </p>
-								<p>Next, I designed a gearbox that transmitted the high-velocity low-torque input of an RC helicopter motor to the high-torque low-velocity (5 Hertz frequecy) drive gears. I designed all of the gears using a python script for Fusion 360. I then designed a lightweight fuselage structure that used tension in the bent skeleton to effectively hold itself together a flexible strength that could resist the violent flapping movement of the wings and possible crashes. I also designed a similar self-supporting wing-spar struture. This structure was designed such that the wings would flex more on the trailing end than the front end, so that the flapping motion would generate forward thrust in addition to lift (as in the flexible wings of birds). Additionally, this self-supporting flexible structure would minimize added weight of excess adhesive and joints.</p>
-								<div class="image main"><img src="images/Fabrication.gif" alt="" /></div>
-								<div class="image main"><img src="images/Construction.png" alt="" /></div>
-								<p>The next step was prototyping the machine. I 3D-printed the mechanical component (joints, gears, connections, etc.) using a high-precision resin 3D-printer. I laser-cut the fuselage skeleton structure out of lightweight fiberglass composite. The wing spars were cut from carbon fiber rods, and the wing fabric was ripstop ultralight nylon. The machine was assembled with adhesive, and metric steel and nylon screws/bolts.</p>
-								<div class="image main"><img src="images/Electronics.png" alt="" /></div>
-								<p>The final part of this project was the electronics. I used an arduino nano microcontroller for the receiver on the drone, and an arduino uno microcontroller for the remote control. The drone control system involved a motor controller connected to the main drive motor, a dual-servo tail control system (two servos control horizontal flaps on the tail), and an radio frequency receiver, all wired to a rechargeable battery and the arduino nano. The remote control had a radio frequency emmmiter, a joystick, and a potentiometer throttle.</p>
-								<div class="image main"><img src="images/FinishedMechanism.png" alt="" /></div>
+								<p>Then, I moved on to the prototyping phase. I 3D-printed all of the components, and assembled a prototype of this iteration of the robot. I used a special technique to cut the hexagonal carbon-fiber tubes that connect each of the robot's modules, and used heat inserts for all of the bolted connection between plastic parts.</p>
 							</section>
 					</div>
 
